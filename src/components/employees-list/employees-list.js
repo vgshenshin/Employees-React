@@ -2,7 +2,7 @@ import EmployeesListItem from '../employees-list-item/employees-list-item';
 
 import './employees-list.css';
 
-const EmployeesList = ({data}) => {
+const EmployeesList = ({data, onDelete}) => {
     //  исп-ем данные с сервера в пропсах - деструктурируем массив data с объектами
     //  исп-я метод map рендерим на странице item'ы 
     const elements = data.map(item => {
@@ -12,7 +12,11 @@ const EmployeesList = ({data}) => {
         //  формируем массив с item'ами с уник.ключами (keys) и остальными пропсами в нем
         return (
             // <EmployeesListItem name={item.name} salary={item.salary}/>
-            <EmployeesListItem key={id} {...itemProps}/>
+            // <EmployeesListItem {...item}/>
+            <EmployeesListItem 
+                key={id} 
+                {...itemProps}
+                onDelete={() => onDelete(id)}/>
         )
     })
 
