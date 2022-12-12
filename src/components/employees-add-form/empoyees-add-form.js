@@ -19,7 +19,7 @@ class EmpoyeesAddForm extends Component {
 
 	onSubmit = (e) => {
 		e.preventDefault();
-		if (this.state.name !== " " && this.state.salary && this.state.name) {
+		if (this.state.name !== " " && isNaN(this.state.name) && this.state.salary && this.state.name) {
 			this.props.onAdd(this.state.name, this.state.salary);
 			this.setState({
 				name: "",
