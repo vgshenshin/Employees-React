@@ -1,5 +1,3 @@
-import { Component } from 'react';
-
 import './employees-list-item.css';
 
 const EmployeesListItem = (props) => {
@@ -16,9 +14,11 @@ const EmployeesListItem = (props) => {
         classNames += ' like'
     }
 
+    let altName = document.documentElement.clientWidth < 576 && name.length > 9 ? name.slice(0, 9) + "..." : name
+
     return (
         <li className={classNames}>
-            <span onClick={onToggleProp} className="list-group-item-label" data-prop="rise">{name}</span>
+            <span onClick={onToggleProp} className="list-group-item-label flex-fill" data-prop="rise">{altName}</span>
             <input type="text" className="list-group-item-input" defaultValue={'$' + salary}/>
             <div className="d-flex justify-content-center align-items-center">
                 <button type="button" 

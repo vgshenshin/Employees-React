@@ -35,7 +35,7 @@ class EmpoyeesAddForm extends Component {
 				<h3>Добавьте нового сотрудника</h3>
 				<form 
 					onSubmit={this.onSubmit}
-					className="add-form d-flex">
+					className="add-form d-flex flex-wrap">
 					<input type="text" 
 							className="form-control new-post-label" 
 							placeholder="Как его зовут?"
