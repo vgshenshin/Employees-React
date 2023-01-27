@@ -1,6 +1,8 @@
 .list-group-item {
     padding: 15px 20px;
-    border-bottom: 1px solid #3d5a80;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+    background-color: #edf1f4;
 }
 
 .list-group-item:last-child {
@@ -8,10 +10,9 @@
 }
 
 .list-group-item span {
-    line-height: 35px;
+    line-height: 40px;
     font-size: 20px;
     cursor: pointer;
-    /* min-width: 550px; */
 }
 
 .list-group-item input {
@@ -19,6 +20,7 @@
     font-size: 20px;
     text-align: center;
     border: 0;
+    background-color: #edf1f4;
 }
 
 .list-group-item button {
@@ -31,6 +33,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #edf1f4;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.15),
+    -3px -3px 5px #fffb;
+    border-radius: 5px;
+}
+
+.list-group-item button:active {
+    box-shadow: inset 3px 3px 5px rgba(0,0,0,0.15),
+        inset -3px -3px 5px #fffb;
 }
 
 .list-group-item .btn-cookie {
@@ -51,11 +62,14 @@
     transition: 0.3s all;
     transform: translateY(30px);
     opacity: 0;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.15),
+    -3px -3px 5px #fffb;
+    border-radius: 5px;
 }
 
 .list-group-item.like .fa-star {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateY(0px);
 }
 
 .list-group-item.increase .list-group-item-label, .list-group-item.increase .list-group-item-input {
@@ -63,7 +77,7 @@
 }
 
 .list-group-item.increase .btn-star {
-    color: #aeaeae;
+    color: #c61414;
 }
 
 
